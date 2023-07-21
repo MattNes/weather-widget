@@ -1,0 +1,19 @@
+<div class="rain-card">
+  <div>
+    <h1 class="title">{{ cardTitle }}</h1>
+    <img class="rain-icon" alt="rain icon" src="../assets/rain-icon.svg" />
+  </div>
+  <div class="rain">
+    <mat-spinner *ngIf="isLoading$ | async" [color]="'accent'"></mat-spinner>
+    <span *ngIf="!(isLoading$ | async)">
+      <span class="rain-subtitle">Last hour</span>
+      <span class="rain-digits">{{ rain.rain_60min }}</span>
+      <span class="rain-unit">mm</span>
+    </span>
+  </div>
+  <div *ngIf="!isSmall && !(isLoading$ | async)" class="rain">
+    <span class="rain-subtitle">Last 24 hour</span>
+    <span class="rain-digits">{{ rain.rain_24h }}</span>
+    <span class="rain-unit">mm</span>
+  </div>
+</div>

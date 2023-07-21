@@ -1,0 +1,30 @@
+<div class="wind-card">
+  <div>
+    <h1 class="title">{{ cardTitle }}</h1>
+    <img class="wind-icon" alt="wind icon" src="../assets/wind-icon.svg" />
+  </div>
+  <div class="wind">
+    <mat-spinner *ngIf="isLoading$ | async" [color]="'accent'"></mat-spinner>
+    <span *ngIf="!(isLoading$ | async)">
+      <span class="wind-subtitle">Wind strength</span>
+      <span class="wind-digits">{{ wind.wind_strength }}</span>
+      <span class="wind-unit">km/h</span>
+    </span>
+  </div>
+  <div *ngIf="!isSmall && !(isLoading$ | async)" class="wind">
+    <span class="wind-subtitle">Gust strength</span>
+    <span class="wind-digits">{{ wind.gust_strength }}</span>
+    <span class="wind-unit">km/h</span>
+  </div>
+  <div *ngIf="!isMedium && !(isLoading$ | async)" class="wind">
+    <span class="wind-subtitle">Wind direction</span>
+    <img
+      class="wind-direction-icon"
+      alt="wind direction"
+      src="../assets/arrow-icon.svg"
+      [style.transform]="'rotate(' + wind.wind_angle + 'deg)'"
+    />
+    <span class="wind-unit">{{ wind.wind_angle }}</span>
+    <span class="wind-unit">°</span>
+  </div>
+</div>

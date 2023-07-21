@@ -1,0 +1,57 @@
+.wind-card {
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  min-width: 250px;
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  box-shadow: 10px 10px 10px 1px rgba(50, 50, 50, 0.2);
+
+  .wind {
+    position: absolute;
+    display: inline-flex;
+    align-items: baseline;
+    margin: 40px;
+    font-weight: 300;
+    bottom: 0;
+
+    .wind-digits {
+      font-size: 80px;
+    }
+    .wind-unit {
+      font-size: 40px;
+    }
+
+    .wind-subtitle {
+      position: absolute;
+      color: rgba(50, 50, 50);
+      bottom: -10px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.wind + .wind {
+  margin-left: 220px;
+}
+
+.wind + .wind + .wind {
+  margin-left: 395px;
+}
+
+.title {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+
+.wind-icon {
+  position: absolute;
+  width: 70px;
+  top: 10%;
+  right: 5%;
+}
+
+.wind-direction-icon{
+  width: 70px;
+}

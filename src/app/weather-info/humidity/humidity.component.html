@@ -1,0 +1,17 @@
+<div class="humidity-card">
+  <div>
+    <h1 class="title">{{ cardTitle }}</h1>
+    <img
+      class="humidity-icon"
+      alt="humidity logo"
+      src="../assets/humidity-icon.svg"
+    />
+  </div>
+  <div class="hum">
+    <mat-spinner *ngIf="isLoading$ | async" [color]="'accent'"></mat-spinner>
+    <span *ngIf="!(isLoading$ | async)">
+      <span class="hum-digits">{{ humidity$ | async}}</span>
+      <span class="hum-unit">%</span>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<mat-list>
+  <mat-list-item
+    [routerLink]="['/dashboard/', city.id]"
+    *ngFor="let city of cities"
+    (click)="onSelect(city)"
+    class="city-list-item"
+    [class.selected]="selectedCity && city.id === selectedCity.id"
+  >
+    {{ city.name }}
+  </mat-list-item>
+</mat-list>

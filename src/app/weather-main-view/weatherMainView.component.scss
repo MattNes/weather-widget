@@ -1,0 +1,66 @@
+.weather-card {
+  position: absolute;
+  margin: 15px 15px 0;
+  overflow: hidden;
+  right: 0;
+  left: 22%;
+  top: 0;
+  bottom: 0;
+  height: calc(100vh - 95px);
+  border-top-right-radius: 25px;
+  background-color: #fafafa;
+  border: 1px solid rgba(50, 50, 50, 0.2);
+
+  box-shadow: 10px 10px 10px 1px rgba(50, 50, 50, 0.2);
+  display: flex;
+  flex-direction: column;
+
+  .city-title {
+    align-items: center;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #4996e48e;
+    border-top-right-radius: 25px;
+    box-shadow: 0px 10px 10px 1px rgba(50, 50, 50, 0.2);
+
+    img {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      margin: 0px 16px;
+    }
+  }
+}
+
+.cities-list {
+  position: absolute;
+
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 20%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fafafa;
+  border: 1px solid rgba(50, 50, 50, 0.2);
+
+  border-top-left-radius: 25px;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 10px 10px 10px 1px rgba(50, 50, 50, 0.2);
+
+  .cities-list-title {
+    border-top-left-radius: 25px;
+    position: relative;
+    align-items: center;
+    width: auto;
+    float: inline-end;
+    display: flex;
+    justify-content: center;
+    background-color: #4996e48e;
+    box-shadow: 0px 10px 10px 0px rgba(50, 50, 50, 0.2);
+  }
+}

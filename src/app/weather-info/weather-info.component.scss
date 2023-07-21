@@ -1,0 +1,16 @@
+.weather-info-content {
+  position: relative;
+  overflow: auto;
+  padding: 30px;
+  height: calc(100vh - 230px);
+
+  .datacard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+  }
+
+  .datacard-container + .datacard-container {
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,26 @@
+mat-list {
+  position: relative;
+  overflow: auto;
+  padding: 30px 0;
+  height: calc(100vh - 230px);
+
+  .city-list-item {
+  border: 1px solid rgba(50, 50, 50, 0.2);
+    color: #000000;
+    display: flex;
+    border-radius: 25px;
+    width: auto;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 15px;
+
+    &:hover {
+      transform: translateY(1px);
+      box-shadow: 0px 3px 3px 1px inset rgba(0, 0, 0, 0.35);
+    }
+    &.selected {
+      transform: translateY(2px);
+      box-shadow: 0px 7px 10px 1px inset rgba(0, 0, 0, 0.35);
+    }
+  }
+}

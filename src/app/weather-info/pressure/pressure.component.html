@@ -1,0 +1,17 @@
+<div class="pressure-card">
+  <div>
+    <h1 class="title">{{ cardTitle }}</h1>
+    <img
+      class="pressure-icon"
+      alt="pressure icon"
+      src="../assets/pressure-icon.svg"
+    />
+  </div>
+  <div class="pressure">
+    <mat-spinner *ngIf="isLoading$ | async" [color]="'accent'"></mat-spinner>
+    <span *ngIf="!(isLoading$ | async)">
+      <span class="pressure-digits">{{ press }}</span>
+      <span class="pressure-unit">hPa</span>
+    </span>
+  </div>
+</div>

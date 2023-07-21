@@ -1,0 +1,38 @@
+.humidity-card {
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  min-width: 250px;
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  box-shadow: 10px 10px 10px 1px rgba(50, 50, 50, 0.2);
+
+  .hum {
+    display: flex;
+    position: absolute;
+    margin: 40px;
+    font-weight: 300;
+    bottom: 0;
+    align-items: baseline;
+
+    .hum-digits {
+      font-size: 80px;
+    }
+    .hum-unit {
+      font-size: 40px;
+    }
+  }
+}
+
+.title {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+
+.humidity-icon {
+  position: absolute;
+  width: 70px;
+  top: 10%;
+  right: 5%;
+}

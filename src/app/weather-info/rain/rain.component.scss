@@ -1,0 +1,50 @@
+.rain-card {
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  min-width: 250px;
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  box-shadow: 10px 10px 10px 1px rgba(50, 50, 50, 0.2);
+
+  .rain {
+    position: absolute;
+    display: inline-flex;
+    align-items: baseline;
+    margin: 40px;
+    font-weight: 300;
+    bottom: 0;
+
+
+    .rain-digits {
+      font-size: 80px;
+    }
+    .rain-unit {
+      font-size: 40px;
+    }
+
+    .rain-subtitle {
+      position: absolute;
+      color: rgba(50, 50, 50);
+      bottom: -10px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.rain + .rain{
+  margin-left: 220px;
+}
+
+.title {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+
+.rain-icon {
+  position: absolute;
+  width: 50px;
+  top: 10%;
+  right: 5%;
+}

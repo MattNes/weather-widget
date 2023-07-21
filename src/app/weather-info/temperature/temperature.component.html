@@ -1,0 +1,18 @@
+<div class="temperature-card">
+  <div>
+    <h1 class="title">{{ cardTitle }}</h1>
+    <img
+      class="temperature-icon"
+      alt="temperature icon"
+      src="../assets/temperature-icon.svg"
+    />
+  </div>
+  <div class="temp">
+    <mat-spinner *ngIf="isLoading$ | async" [color]="'accent'"></mat-spinner>
+    <span *ngIf="!(isLoading$ | async)">
+      <span class="temp-digits">{{ temp }}</span>
+      <span class="temp-unit">°</span>
+      <span class="temp-decimal-digits">.{{ tempDecimal }}</span>
+    </span>
+  </div>
+</div>

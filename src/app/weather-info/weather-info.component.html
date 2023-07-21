@@ -1,0 +1,13 @@
+<div *ngIf="selectedCity$">
+  <div class="weather-info-content">
+    <div class="datacard-container">
+      <app-temperature></app-temperature>
+      <app-humidity></app-humidity>
+      <app-pressure></app-pressure>
+    </div>
+    <div class="datacard-container">
+      <app-wind></app-wind>
+      <app-rain></app-rain>
+    </div>
+  </div>
+</div>
