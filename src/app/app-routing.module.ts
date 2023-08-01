@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WeatherMainViewComponent } from './weather-main-view/weatherMainView.component';
-import { WeatherInfoComponent } from './weather-info/weather-info.component';
-import { MoreInfoComponent } from './more-info/more-info.component';
+import { MoreInfoComponent } from './views/more-info/more-info.component';
+import { WeatherInfoComponent } from './components/weather-info/weather-info.component';
+import { WeatherMainViewComponent } from './views/weather-main-view/weatherMainView.component';
 
 const routes: Routes = [
   {

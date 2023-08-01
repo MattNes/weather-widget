@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { resetSelectedCity } from './state/city/city.action';
+import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { resetSelectedCity } from './store/city/city.action';
 
 @Component({
   selector: 'app-root',

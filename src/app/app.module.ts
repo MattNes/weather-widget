@@ -1,26 +1,27 @@
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
+import { NgChartsModule } from 'ng2-charts';
 import { EffectsModule } from '@ngrx/effects';
 import { AppComponent } from './app.component';
 import { MatListModule } from '@angular/material/list';
+import { cityEffects } from './store/city/city.effect';
 import { AppRoutingModule } from './app-routing.module';
-import { cityReducer } from './state/city/city.reducer';
+import { cityReducer } from './store/city/city.reducer';
 import { MatCommonModule } from '@angular/material/core';
 import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { WeatherMainViewComponent } from './weather-main-view/weatherMainView.component';
-import { WindComponent } from './weather-info/wind/wind.component';
-import { RainComponent } from './weather-info/rain/rain.component';
-import { CityListComponent } from './city-list/city-list.component';
-import { WeatherInfoComponent } from './weather-info/weather-info.component';
+import { MoreInfoComponent } from './views/more-info/more-info.component';
+import { weatherInfoReducer } from './store/weatherInfo/weatherInfo.reducer';
+import { WindComponent } from './components/weather-info/wind/wind.component';
+import { RainComponent } from './components/weather-info/rain/rain.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { HumidityComponent } from './weather-info/humidity/humidity.component';
-import { PressureComponent } from './weather-info/pressure/pressure.component';
-import { TemperatureComponent } from './weather-info/temperature/temperature.component';
-import { weatherInfoReducer } from './state/weatherInfo/weatherInfo.reducer';
-import { cityEffects } from './state/city/city.effect';
-import { MoreInfoComponent } from './more-info/more-info.component';
+import { CityListComponent } from './components/city-list/city-list.component';
+import { WeatherInfoComponent } from './components/weather-info/weather-info.component';
+import { HumidityComponent } from './components/weather-info/humidity/humidity.component';
+import { PressureComponent } from './components/weather-info/pressure/pressure.component';
+import { WeatherMainViewComponent } from './views/weather-main-view/weatherMainView.component';
+import { TemperatureComponent } from './components/weather-info/temperature/temperature.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { MoreInfoComponent } from './more-info/more-info.component';
       logOnly: environment.production,
       autoPause: true,
     }),
+    NgChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
